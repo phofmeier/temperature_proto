@@ -1,0 +1,5 @@
+syntax = "proto3";
+message Settings {
+    double oven_target_temperature = 1;
+    double core_target_temperature = 2; 
+}
