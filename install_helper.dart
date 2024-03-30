@@ -32,7 +32,12 @@ class ProtobufInstallHelper {
     }
     String? protoc = findCompiler();
     Directory("./lib/gen/").create();
-    List<String> protocArgs = ['-I.', '--dart_out=./lib/gen/', source];
+    List<String> protocArgs = [
+      '-I.',
+      '--dart_out=./lib/gen/',
+      source,
+      "google/protobuf/timestamp.proto"
+    ];
     print("Generate Protobuf for $source");
     var result = Process.runSync(protoc!, protocArgs);
     if (result.exitCode == 0) {
