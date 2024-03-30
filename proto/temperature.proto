@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+
+message TemperatureValue{
+    google.protobuf.Timestamp timestamp = 1;
+    double value = 2;
+}
+
+message CurrentTemperature {
+    TemperatureValue oven_temperature = 1;
+    TemperatureValue core_temperature = 2; 
+
+    double oven_temperature_change = 3;
+    double core_temperature_change = 4;
+}
