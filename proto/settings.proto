@@ -1,4 +1,7 @@
 syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
 message Settings {
     double oven_target_temperature = 1;
     double core_target_temperature = 2; 
