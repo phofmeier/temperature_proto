@@ -2,4 +2,6 @@ syntax = "proto3";
 message Settings {
     double oven_target_temperature = 1;
     double core_target_temperature = 2; 
+    google.protobuf.Timestamp start_time = 3;
+
 }
